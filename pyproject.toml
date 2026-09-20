@@ -13,6 +13,7 @@ entrypoint = "app.main:app"
 [tool.black]
 line-length = 79
 skip-magic-trailing-comma = true
+target-version = ["py314"]
 
 [tool.mypy]
 disallow_untyped_defs = true
@@ -30,4 +31,5 @@ addopts = "-v"
 testpaths = [
     "tests",
 ]
+pythonpath = ["."]
 
