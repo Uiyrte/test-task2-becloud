@@ -18,6 +18,10 @@ def read_task(db: Session, task_id: int) -> Optional[Task]:
     return db_task
 
 
+def read_all_tasks(db: Session) -> list[Task]:
+    return db.query(Task).all()
+
+
 def update_task(db: Session, task_id: int, task: TaskUpdate) -> Optional[Task]:
     db_task = db.get(Task, task_id)
     if db_task is None:
