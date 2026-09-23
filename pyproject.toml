@@ -19,7 +19,7 @@ target-version = ["py314"]
 disallow_untyped_defs = true
 disallow_incomplete_defs = true
 check_untyped_defs = true
-exclude = ["venv", ".venv"]
+exclude = ["venv", ".venv", "tests"]
 
 [tool.isort]
 profile = "black"
