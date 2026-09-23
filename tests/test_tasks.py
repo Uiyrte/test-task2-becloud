@@ -50,7 +50,7 @@ def test_create_task_without_description():
 def test_get_correct_task():
     create_response = client.post("/tasks/", json={"title": "Test"})
     task_id = create_response.json()["id"]
-    response = client.get(f"/task/{task_id}")
+    response = client.get(f"/tasks/{task_id}")
     assert response.status_code == 200
     assert response.json()["title"] == "Test"
     assert response.json()["description"] is None
